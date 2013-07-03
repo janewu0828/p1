@@ -11,8 +11,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends DroidGap {
-	public final String MyURL1 = "http://womany.net/debates/12";
-	public final String MyURL2 = "http://womany.net/read/article/1922";
+	public final String MyURL = "http://womany.net/debates/12";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -32,19 +31,13 @@ public class MainActivity extends DroidGap {
 		
 		DialogInterface.OnClickListener openURL = new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
-				loadUrl(MyURL1);
-			}	
-		};
-		
-		DialogInterface.OnClickListener openURL2 = new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface dialog, int which) {
-				loadUrl(MyURL2);
+				loadUrl(MyURL);
 			}	
 		};
 	
 		MyAlertDialog.setPositiveButton("婚姻",openURL);
-		MyAlertDialog.setNeutralButton("極光",OkClick);
-		MyAlertDialog.setNegativeButton("滾",OkClick);
+//		MyAlertDialog.setNeutralButton("積極",openURL2);
+		MyAlertDialog.setNegativeButton("右邊按鈕",OkClick);
 		MyAlertDialog.show();
 	}
 
