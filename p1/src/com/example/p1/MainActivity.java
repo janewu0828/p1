@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends DroidGap {
 	public final String MyURL1 = "http://womany.net/debates/12";
-	public final String MyURL2 = "http://womany.net/shares/339";
+	public final String MyURL2 = "http://womany.net/read/article/1922";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -43,8 +43,8 @@ public class MainActivity extends DroidGap {
 		};
 	
 		MyAlertDialog.setPositiveButton("婚姻",openURL);
-		MyAlertDialog.setNeutralButton("積極",OkClick);
-		MyAlertDialog.setNegativeButton("右邊按鈕",OkClick);
+		MyAlertDialog.setNeutralButton("極光",OkClick);
+		MyAlertDialog.setNegativeButton("滾",OkClick);
 		MyAlertDialog.show();
 	}
 
