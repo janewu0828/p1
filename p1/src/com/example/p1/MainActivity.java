@@ -1,4 +1,4 @@
-package com.example.p1;
+ï»¿package com.example.p1;
 
 import org.apache.cordova.*;
 import android.os.Bundle;
@@ -11,7 +11,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends DroidGap {
-	public final String MyURL = "http://womany.net/debates/12";
+	public final String MyURL1 = "http://womany.net/debates/12";
+	public final String MyURL2 = "http://womany.net/shares/339";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,8 @@ public class MainActivity extends DroidGap {
 	
 	private void ShowAlertDialog(){
 		Builder MyAlertDialog = new AlertDialog.Builder(this);
-		MyAlertDialog.setTitle("»¡©ú");
-		MyAlertDialog.setMessage("Ãö©ó»¡©ú¨Æ±¡");
+		MyAlertDialog.setTitle("ç›¸é—œ");
+		MyAlertDialog.setMessage("é—œæ–¼ç›¸é—œçš„äº‹æƒ…");
 		
 		DialogInterface.OnClickListener OkClick = new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
@@ -31,13 +32,19 @@ public class MainActivity extends DroidGap {
 		
 		DialogInterface.OnClickListener openURL = new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
-				//loadUrl(MyURL);
+				loadUrl(MyURL1);
+			}	
+		};
+		
+		DialogInterface.OnClickListener openURL2 = new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				loadUrl(MyURL2);
 			}	
 		};
 	
-		MyAlertDialog.setPositiveButton("±B«Ã",openURL);
-		MyAlertDialog.setNeutralButton("¤¤¶¡«ö¶s",OkClick);
-		MyAlertDialog.setNegativeButton("¥kÃä«ö¶s",OkClick);
+		MyAlertDialog.setPositiveButton("å©šå§»",openURL);
+		MyAlertDialog.setNeutralButton("ç©æ¥µ",OkClick);
+		MyAlertDialog.setNegativeButton("å³é‚ŠæŒ‰éˆ•",OkClick);
 		MyAlertDialog.show();
 	}
 
@@ -46,8 +53,8 @@ public class MainActivity extends DroidGap {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		
-		menu.add(0, 0, 0, "»¡©ú");
-		menu.add(0, 1, 1, "Â÷¶}");
+		menu.add(0, 0, 0, "èªªæ˜");
+		menu.add(0, 1, 1, "é›¢é–‹");
 		return true;
 	}
 	
