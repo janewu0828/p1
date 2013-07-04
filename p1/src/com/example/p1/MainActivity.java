@@ -36,7 +36,7 @@ public class MainActivity extends DroidGap {
 		};
 	
 		MyAlertDialog.setPositiveButton("婚姻",openURL);
-		MyAlertDialog.setNegativeButton("右邊按鈕",OkClick);
+		MyAlertDialog.setNegativeButton("滾",OkClick);
 		MyAlertDialog.show();
 	}
 
