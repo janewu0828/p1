@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends DroidGap {
-	public final String MyURL = "http://womany.net/debates/12";
+	public final String MyURL = "http://womany.net/about?ref=footer";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends DroidGap {
 			}	
 		};
 	
-		MyAlertDialog.setPositiveButton("婚姻",openURL);
+		MyAlertDialog.setPositiveButton("關於我們",openURL);
 		MyAlertDialog.setNegativeButton("滾",OkClick);
 		MyAlertDialog.show();
 	}
